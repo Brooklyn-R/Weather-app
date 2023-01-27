@@ -1,5 +1,5 @@
 # Weather-App
 Simple weather forecast with digital clock.
 
-## Built with:
+## Languages used:
 Html, CSS & Javascript
