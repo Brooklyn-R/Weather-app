@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  background: #222;
+  background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 120%;
+}
+
+.app {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+/* Date & time  */
+.datetime {
+  color: #fcf6f5ff;
+  background: #000000d0;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  max-width: 420px;
+  padding: 15px 10px;
+  border: 2px solid #2e94e3;
+  border-radius: 30px;
+  overflow-x: hidden;
+  transition: 0.5s;
+  transition-property: background, box-shadow;
+  margin-bottom: 20px;
+}
+
+.datetime:hover {
+  background: #2e94e3;
+  box-shadow: 0 0 30px #2e94e3;
+}
+
+.date {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+  opacity: 1;
+}
+
+.time {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.time span:not(:last-child) {
+  position: relative;
+  margin: 0 6px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.time span:last-child {
+  background: #2e94e3;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 10px;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+/* weather  */
+.card {
+  background: #000000d0;
+  color: #fcf6f5ff;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  border: 2px solid #2e94e3;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: #fcf6f5ff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 105%;
+  width: calc(100% - 100px);
+  cursor: pointer;
+}
+
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  width: 46px;
+  height: 44px;
+  outline: none;
+  background: #7c7c7c2b;
+  color: #fcf6f5ff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+button:hover {
+  background: #101820ff;
+  color: #fcf6f5ff;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: #fcf6f5ff;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.weather h2 {
+  font-weight: 500;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+  font-size: 25px;
+}
